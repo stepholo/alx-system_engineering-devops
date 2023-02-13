@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n 3 iacata
+cat ./iacta | head -3 | tail -1
