@@ -1,5 +1,3 @@
-This repo with show the standard input and standard input redirection 
-Shell I/O Redirection
 0-hello_world
 100-empty_casks
 101-gifs
@@ -27,4 +25,3 @@ Shell I/O Redirection
 7-file
 8-cwd_state
 9-duplicate_last_line
-README.md
