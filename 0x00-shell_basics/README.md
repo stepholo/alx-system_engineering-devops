@@ -1,5 +1,3 @@
-1. This script prints the absolute path name of the current working directory
-Magic school
 0-current_working_directory
 100-lets_move
 101-clean_emacs
@@ -19,5 +17,4 @@ Magic school
 7-movethatfile
 8-firstdelete
 9-firstdirdeletion
-README.md
 school.mgc
