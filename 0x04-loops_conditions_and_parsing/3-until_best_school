@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Script to display `Best School` 10 times using until
+
+NAME="Best School"
+i="1"
+
+until [ $i -gt 10 ]; do
+	echo "$NAME"
+	i=$((i+1))
+done
