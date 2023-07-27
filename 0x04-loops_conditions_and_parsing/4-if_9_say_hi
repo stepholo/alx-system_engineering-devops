@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Script to display `Best School` 10 times except 9th iteration
+
+NAME="Best School"
+GREET="Hi"
+i="0"
+
+while [ $i -lt 10 ]; do
+	if [ $i -ne 9 ]
+		then
+		echo "$NAME"
+	else
+		echo "$GREET"
+	fi
+	i=$((i+1))
+done
+echo "$NAME"
+
