@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Script that dispalys `Best School` 10 times using while loop
+
+NAME="Best School"
+i="0"
+
+while [ $i -ne 10 ]; do
+	echo "$NAME"
+	i=$((i+1))
+done
