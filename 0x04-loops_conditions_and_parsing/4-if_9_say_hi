@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script to display `Best School` 10 times except 9th iteration
 
 NAME="Best School"
