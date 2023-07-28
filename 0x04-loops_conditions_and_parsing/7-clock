@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script to display time using nested while loop
+
+HOUR=0
+MIN=1
+
+while (( HOUR <= 12 )); do
+	echo 'HOUR: '"$HOUR"
+
+	while (( MIN <= 60 )); do
+		echo "$MIN"
+		MIN=$((MIN+1))
+	done
+
+	MIN=1
+	HOUR=$((HOUR+1))
+done
+
