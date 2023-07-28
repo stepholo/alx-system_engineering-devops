@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script that displays superstitious numbers using case control flow
 
 BAD="bad luck from China"
