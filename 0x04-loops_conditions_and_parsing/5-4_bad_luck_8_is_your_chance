@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Dispalys diff test for 4 and 8 iteration
 
 NAME="Best School"
