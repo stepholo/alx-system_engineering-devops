@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script to display `Best School` 10 times using until
 
 NAME="Best School"
