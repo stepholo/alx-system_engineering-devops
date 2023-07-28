@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script that dispalys `Best School` 10 times using while loop
 
 NAME="Best School"
