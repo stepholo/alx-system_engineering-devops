@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Reading from a file and printing to stdout in formated way
+
+while IFS=: read -r user_name _ user_id _ _ home_dir _; do
+	echo -n "$user_name"
+	echo -n ":"
+	echo -n "$user_id"
+	echo -n ":"
+	echo -n "$home_dir"
+	echo
+done < /etc/passwd
