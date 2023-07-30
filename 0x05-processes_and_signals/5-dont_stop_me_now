@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Script to terminate a process
 
-PID=$(pgrep 4-to_infinity_and_beyond)
-kill "$PID"
-echo 'Terminated'
+kill 4-to_infinity_and_beyond
