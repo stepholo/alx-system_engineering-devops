@@ -7,15 +7,15 @@
 
 echo $$ > /var/run/myscript.pid
 
-trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "I hate the kill command"; rm -rf /var/run/myscript.pid; exit' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
 
 function handle_exit {
-	rm /var/run/myscript.pid
+	rm -rf /var/run/myscript.pid
 	kill $$
 }
 
-trap 'handle_exit' SIGQUIT || SIGTERM
+trap 'handle_exit' SIGQUIT
 
 while true; do
 	echo 'To infinity and beyond'
