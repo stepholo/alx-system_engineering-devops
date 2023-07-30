@@ -5,7 +5,7 @@ file_path=$(find . -name "school")
 
 if [ -e "$file_path" ]
 then
-	echo 'shool file exists'
+	echo 'school file exists'
 	if [ -s "$file_path" ]
 	then
 		echo 'school file is not empty'
