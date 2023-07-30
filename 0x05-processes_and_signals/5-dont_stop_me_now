@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
 # Script to terminate a process
 
-kill 4-to_infinity_and_beyond
+PID=$(pgrep 4-to_infinity_and_beyond)
+
+if [ -z "$PID" ]; then
+	echo "Process 4-to_infinity_and_beyond is not running."
+else
+	kill "$PID"
+	wait "$PID" 2>/dev/null
+	if ps -p "$PID" > /dev/null; then
+		kill -9 "$PID"
+	else
+		echo "Terminated"
+	fi
+fi
