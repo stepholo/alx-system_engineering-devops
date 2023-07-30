@@ -2,3 +2,4 @@
 # Script to terminate a process
 
 killall 4-to_infinity_and_beyond
+echo 'Terminated'
