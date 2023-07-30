@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script to terminate a process
 
-killall -e 4-to_infinity_and_beyond
+pkill -f 4-to_infinity_and_beyond
