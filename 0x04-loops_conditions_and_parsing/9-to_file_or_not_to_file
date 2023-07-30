@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # Script to give information about `school` file
 
-if [ -e school ]
+file_path=$(find . -name "school")
+
+if [ -e "$file_path" ]
 then
 	echo 'shool file exists'
-	if [ -s school ]
+	if [ -s "$file_path" ]
 	then
 		echo 'school file is not empty'
 	fi
-	if [ -f school ]
+	if [ -f "$file_path" ]
 	then
 		echo 'school is a regular file'
 	fi
