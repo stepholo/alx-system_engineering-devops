@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to kill 7-highlander
+
+kill -9 7-highlander
