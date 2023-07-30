@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display the running process of bash
+# shellcheck disable=SC2009
+ps -u | grep "bash"
