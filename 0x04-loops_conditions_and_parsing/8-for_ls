@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# List content of current directory in list format using find and cut
+
+for file in $(find . -maxdepth 1 -name '[^.]*-*' -printf '%f\n' | cut -d'-' -f2-);
+do
+	echo "$file"
+done
