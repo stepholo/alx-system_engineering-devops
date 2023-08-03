@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Change localhost IP address and block facebook
+# *****localhost resolves to 127.0.0.1****
+# ****facebook.com resolves to 8.8.8.8****
+
+new_localhost_ip="127.0.0.2"
+
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/$new_localhost_ip/' ~/hosts.new
+echo "8.8.8.8	facebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
