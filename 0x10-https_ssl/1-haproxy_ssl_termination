@@ -1,5 +1,4 @@
-
-bal
+global
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -34,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  stepholo-frontend
+
+frontend lb-frontend-http
         bind *:80
         mode http
-        bind *:443 ssl crt /etc/haproxy/certs/www.stepholo.tech.pem
-        redirect scheme https if !{ ssl_fc }
-        default_backend stepholo-backend
-backend stepholo-backend
-        balance roundrobin
-        server 279554-web-01 54.87.160.173:80 check
-        server 279554-web-02 54.162.87.193:80 check
+        http-request set-header X-Forwarded-Proto http
+        default_backend lb-backend
 
-listen http-in
-        bind :80
+frontend lb-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.stepholo.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend lb-backend
+
+backend lb-backend
         balance roundrobin
         server 279554-web-01 54.87.160.173:80 check
         server 279554-web-02 54.162.87.193:80 check
