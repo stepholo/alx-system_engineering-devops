@@ -38,7 +38,7 @@ if __name__ == '__main__':
             complete = 'True' if task['completed'] else 'False'
             task_title = task['title']
             writer.writerow({
-                'USER_ID': emp_id,
+                'USER_ID': f'{emp_id}',
                 'USERNAME': username,
                 'TASK_COMPLETED_STATUS': complete,
                 'TASK_TITLE': task_title
