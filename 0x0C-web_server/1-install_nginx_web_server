@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
 # Installs nginx server
+
+# Update package index
 apt-get update
+
+# Install nginx
 apt-get -y install nginx
-ufw allow 'Nginx HTTP',
+
+# (Optional) Allow HTTP traffic via UFW, if UFW is installed
+if command -v ufw &> /dev/null; then
+    ufw allow 'Nginx HTTP'
+fi
+
+# Add simple HTML file
 echo "Hello World!" > /var/www/html/index.html
-systemct1 nginx start
+
+# Start nginx
+systemctl start nginx
+
